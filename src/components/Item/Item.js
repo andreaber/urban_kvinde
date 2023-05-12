@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Item.scss'
 
 const Item = ( {item} ) => {
@@ -8,10 +9,9 @@ const Item = ( {item} ) => {
       <div className='img-container'>
         <img src={item.imageUrl} alt='producto' className='img-url' />
       </div>
-      <p>{item.description}</p>
+      {/*<p>{item.description}</p>*/}
       <p>Precio: ${item.price}</p>
-      <p>Stock: {item.stock}</p>
-      <button className='btn btn-secondary'>Ver más</button>
+      <Link to={`/detail/${item.id}`} className='btn btn-secondary'>Ver más</Link>
     </div>
   )
 }
