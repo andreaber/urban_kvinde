@@ -9,7 +9,7 @@ const requestData = () => {
       // } else {
       //   reject('Promesa rechazada')
       // } 
-    }, 1500)
+    }, 1000)
   })
 }
 

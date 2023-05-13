@@ -1,8 +1,12 @@
 .cart-widget {
   display: flex;
   align-items: center;
-  gap: 4px;
+  // gap: 4px;
+  gap: 14px;
   cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s;
 
   .cart-icon {
     font-size: 40px;
@@ -11,5 +15,10 @@
   span {
     color: black;
     font-size: 20px;  
+  }
+  
+  &-active {
+    visibility: visible;
+    opacity: 1;
   }
 }

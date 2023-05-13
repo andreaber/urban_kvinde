@@ -48,11 +48,17 @@
       .dropdown .dropbtn:focus + .dropdown-content {
         display: block;
       }
-      
-      // .dropbtn {
-      //   // Agrega aquí los estilos para el enlace
-      // }
     }
+  }
+
+  .user {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding: 20px;
   }
 }
 

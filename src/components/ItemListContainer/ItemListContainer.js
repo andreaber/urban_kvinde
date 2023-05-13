@@ -3,6 +3,7 @@ import './ItemListContainer.scss'
 import requestData from '../../helpers/requestData'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
+import Loader from '../Loader/Loader'
 
 
 const ItemListContainer = () => {
@@ -11,7 +12,6 @@ const ItemListContainer = () => {
   const [loading, setLoading] = useState(true)
 
   const { categoryId } = useParams()
-  console.log(categoryId)
 
   useEffect(() => {
     setLoading(true)
@@ -33,11 +33,10 @@ const ItemListContainer = () => {
   }, [categoryId])
 
   return ( 
-    <div className="list-container">
-
+    <div className="list-container my-5">
       {
-        loading
-          ? <h2>Cargando...</h2>
+        loading 
+          ? <Loader />
           : <ItemList items={products}/>
       }
     </div>

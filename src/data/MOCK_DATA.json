@@ -6,6 +6,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 22000,
     "stock": 11,
+    "sizes": ["small", "medium", "large"],
     "category": "deportivos"
   },
   {
@@ -14,7 +15,8 @@
     "imageUrl": "https://i.ibb.co/dJbG1cT/yeezy.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 28000,
-    "stock": 18,
+    "stock": 4,
+    "sizes": ["small", "medium", "large"],
     "category": "deportivos"
   },
   {
@@ -23,7 +25,8 @@
     "imageUrl": "https://i.ibb.co/bPmVXyP/black-converse.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 11000,
-    "stock": 17,
+    "stock": 0,
+    "sizes": ["small", "medium", "large"],
     "category": "deportivos"
   },
   {
@@ -33,6 +36,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 26000,
     "stock": 15,
+    "sizes": ["small", "medium", "large"],
     "category": "deportivos"
   },
   {
@@ -42,6 +46,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 16000,
     "stock": 10,
+    "sizes": ["small", "medium", "large"],
     "category": "deportivos"
   },
   {
@@ -51,6 +56,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 35000,
     "stock": 12,
+    "sizes": ["small", "medium", "large"],
     "category": "deportivos"
   },
   {
@@ -59,7 +65,8 @@
     "imageUrl": "https://i.ibb.co/w4k6Ws9/nike-funky.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 49000,
-    "stock": 21,
+    "stock": 3,
+    "sizes": ["small", "medium", "large"],
     "category": "deportivos"
   },
   {
@@ -68,7 +75,8 @@
     "imageUrl": "https://i.ibb.co/Mhh6wBg/timberlands.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 28000,
-    "stock": 18,
+    "stock": 1,
+    "sizes": ["small", "medium", "large"],
     "category": "deportivos"
   },
   {
@@ -78,7 +86,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 12500,
     "stock": 12,
-    "category": "jackets"
+    "sizes": ["small", "medium", "large"],
+    "category": "ellos"
   },
   {
     "id": 10,
@@ -87,7 +96,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 19000,
     "stock": 5,
-    "category": "jackets"
+    "sizes": ["small", "medium", "large"],
+    "category": "ellos"
   },
   {
     "id": 11,
@@ -96,7 +106,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 21000,
     "stock": 11,
-    "category": "jackets"
+    "sizes": ["small", "medium", "large"],
+    "category": "ellas"
   },
   {
     "id": 12,
@@ -105,7 +116,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 16500,
     "stock": 10,
-    "category": "jackets"
+    "sizes": ["small", "medium", "large"],
+    "category": "ellos"
   },
   {
     "id": 13,
@@ -114,7 +126,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 18500,
     "stock": 6,
-    "category": "jackets"
+    "sizes": ["small", "medium", "large"],
+    "category": "ellas"
   },
   {
     "id": 14,
@@ -123,6 +136,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 25000,
     "stock": 8,
+    "sizes": ["small", "medium", "large"],
     "category": "gorros"
   },
   {
@@ -132,6 +146,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 18000,
     "stock": 12,
+    "sizes": ["small", "medium", "large"],
     "category": "gorros"
   },
   {
@@ -141,6 +156,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 35000,
     "stock": 15,
+    "sizes": ["small", "medium", "large"],
     "category": "gorros"
   },
   {
@@ -149,7 +165,8 @@
     "imageUrl": "https://i.ibb.co/RjBLWxB/grey-brim.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 25000,
-    "stock": 15,
+    "stock": 4,
+    "sizes": ["small", "medium", "large"],
     "category": "gorros"
   },
   {
@@ -158,7 +175,8 @@
     "imageUrl": "https://i.ibb.co/YTjW3vF/green-beanie.png",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 18000,
-    "stock": 20,
+    "stock": 11,
+    "sizes": ["small", "medium", "large"],
     "category": "gorros"
   },
   {
@@ -168,6 +186,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 14000,
     "stock": 16,
+    "sizes": ["small", "medium", "large"],
     "category": "gorros"
   },
   {
@@ -177,6 +196,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 18000,
     "stock": 17,
+    "sizes": ["small", "medium", "large"],
     "category": "gorros"
   },
   {
@@ -186,6 +206,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 14000,
     "stock": 13,
+    "sizes": ["small", "medium", "large"],
     "category": "gorros"
   },
   {
@@ -195,6 +216,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 16000,
     "stock": 8,
+    "sizes": ["small", "medium", "large"],
     "category": "gorros"
   },
   {
@@ -204,6 +226,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 2500,
     "stock": 9,
+    "sizes": ["small", "medium", "large"],
     "category": "ellas"
   },
   {
@@ -213,6 +236,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 20000,
     "stock": 14,
+    "sizes": ["small", "medium", "large"],
     "category": "ellas"
   },
   {
@@ -222,6 +246,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 18000,
     "stock": 10,
+    "sizes": ["small", "medium", "large"],
     "category": "ellas"
   },
   {
@@ -231,6 +256,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 8000,
     "stock": 11,
+    "sizes": ["small", "medium", "large"],
     "category": "ellas"
   },
   {
@@ -240,6 +266,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 14500,
     "stock": 15,
+    "sizes": ["small", "medium", "large"],
     "category": "ellas"
   },
   {
@@ -249,6 +276,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 13500,
     "stock": 19,
+    "sizes": ["small", "medium", "large"],
     "category": "ellas"
   },
   {
@@ -258,6 +286,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 21000,
     "stock": 7,
+    "sizes": ["small", "medium", "large"],
     "category": "ellas"
   },
   {
@@ -267,6 +296,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 13250,
     "stock": 0,
+    "sizes": ["small", "medium", "large"],
     "category": "ellos"
   },
   {
@@ -276,6 +306,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 23500,
     "stock": 9,
+    "sizes": ["small", "medium", "large"],
     "category": "ellos"
   },
   {
@@ -285,6 +316,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 21500,
     "stock": 12,
+    "sizes": ["small", "medium", "large"],
     "category": "ellos"
   },
   {
@@ -294,6 +326,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 21000,
     "stock": 15,
+    "sizes": ["small", "medium", "large"],
     "category": "ellos"
   },
   {
@@ -303,6 +336,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 14000,
     "stock": 10,
+    "sizes": ["small", "medium", "large"],
     "category": "ellos"
   },
   {
@@ -312,6 +346,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor urna vel ipsum pharetra convallis. Etiam feugiat turpis eget sapien.",
     "price": 25000,
     "stock": 9,
+    "sizes": ["small", "medium", "large"],
     "category": "ellos"
   }
 ]
