@@ -1,23 +1,30 @@
 import { useEffect, useState } from "react"
-import requestData from "../../helpers/requestData"
 import { useParams } from "react-router-dom"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import Loader from "../Loader/Loader"
+import { db } from "../../firebase/firebaseConfig"
+import { doc, getDoc } from "firebase/firestore"
 
 
 const ItemDetailContainer = () => {
 
   const [item, setItem] = useState(null)
   const [loading, setLoading] = useState(true)
-
+  console.log(item)
   const { itemId } = useParams()
 
   useEffect(() => {
     setLoading(true)
 
-    requestData()
-      .then((res) => {
-        setItem( res.find((prod) => prod.id === Number(itemId)) )
+    // 1. armo la ref (sync)
+    const docRef = doc(db, 'productos', itemId)
+    // 2. llamo a la ref (sync)
+    getDoc(docRef)
+      .then((doc) => {
+        setItem({
+          id: doc.id,
+          ...doc.data()
+        })
       })
       .finally(() => {
         setLoading(false)
