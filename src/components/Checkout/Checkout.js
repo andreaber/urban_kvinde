@@ -4,42 +4,30 @@ import Swal from "sweetalert2"
 import { Navigate } from "react-router-dom"
 import { collection, documentId, addDoc, where, query, getDocs, writeBatch } from "firebase/firestore"
 import { db } from "../../firebase/firebaseConfig"
+import { Formik } from 'formik'
+import * as Yup from 'yup'
 
+
+const validationSchema = Yup.object().shape({
+  nombre: Yup.string()
+    .min(3, '¡Demasiado corto!')
+    .max(30, '¡Demasiado largo!')
+    .required('Este campo es obligatorio'),
+  direccion: Yup.string()
+    .min(6, '¡Demasiado corto!')
+    .max(30, '¡Demasiado largo!')
+    .required('Este campo es obligatorio'),
+  email: Yup.string()
+    .email('Este correo electrónico no es válido')
+    .required('Este campo es obligatorio')
+})
 
 const Checkout = () => {
   const { cart, totalCart, emptyCart } = useContext(CartContext)
 
   const [orderId, setOrderId] = useState(null)
 
-  const [values, setValues] = useState({
-    nombre: '',
-    direccion: '',
-    email: ''
-  })
-
-  const handleInputChange = (e) => {
-    setValues({
-      ...values, 
-      [e.target.name]: e.target.value
-    })
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    // validaciones
-    if (values.nombre.length < 3) {
-      Swal.fire('El nombre es muy corto')
-      return 
-    }
-    if (values.direccion.length < 6) {
-      Swal.fire('La dirección es muy corta')
-      return 
-    }
-    if (!values.email.includes('@')) {
-      Swal.fire('El correo electrónico no es válido')
-      return 
-    }
-
+  const generateOrder = async (values) => {
     const order = {
       cliente: values,
       items: cart,
@@ -74,14 +62,6 @@ const Checkout = () => {
       const { id } = await addDoc(ordersRef, order)
       setOrderId(id)
       emptyCart()
-      // batch.commit()
-      //   .then(() => {
-      //     addDoc(ordersRef, order)
-      //       .then((doc) => {
-      //         setOrderId(doc.id)
-      //         emptyCart()
-      //       })
-      //   })
     } else {
       Swal.fire('Hay items sin stock: ' + outOfStock.map(i => i.name).join(', '))
     }
@@ -106,57 +86,66 @@ const Checkout = () => {
       <h2>Ingresa tus datos</h2>
       <hr />
 
-      <form onSubmit={handleSubmit}>
-        <input 
-          value={values.nombre}
-          onChange={handleInputChange}
-          name='nombre'
-          type="text"
-          className="form-control my-2"
-          placeholder="Tu nombre"
-        />
-        
-        <input 
-          value={values.direccion}
-          onChange={handleInputChange}
-          name='direccion'
-          type="text"
-          className="form-control my-2"
-          placeholder="Tu dirección"
-        />
+      <Formik
+        validationSchema={validationSchema}
+        initialValues={{
+          nombre: '',
+          direccion: '',
+          email: ''
+        }}
+        onSubmit={generateOrder}
+      >
+        {({values, errors, touched, handleChange, handleSubmit}) => (
+            <form onSubmit={handleSubmit}>
+              <input 
+                value={values.nombre}
+                onChange={handleChange}
+                name='nombre'
+                type="text"
+                className="form-control my-2"
+                placeholder="Tu nombre"
+              />
+              {errors.nombre && touched.nombre ? <p style={{color:'red'}}>{errors.nombre}</p> : null}
+              
+              <input 
+                value={values.direccion}
+                onChange={handleChange}
+                name='direccion'
+                type="text"
+                className="form-control my-2"
+                placeholder="Tu dirección"
+              />
+              {errors.direccion && touched.direccion ? <p style={{color: 'red'}}>{errors.direccion}</p> : null}
 
-        <input 
-          value={values.email}
-          onChange={handleInputChange}
-          name='email'
-          type="email"
-          className="form-control my-2"
-          placeholder="Tu email"
-        />
+              <input 
+                value={values.email}
+                onChange={handleChange}
+                name='email'
+                type="email"
+                className="form-control my-2"
+                placeholder="Tu email"
+              />
+              {errors.email && touched.email ? <p style={{color: 'red'}}>{errors.email}</p> : null}
 
-        <button type="submit" className="btn btn-primary">Enviar</button>
-      </form>
+              <button type="submit" className="btn btn-primary">Enviar</button>
+            </form>)}
+      </Formik>
     </div>
   )
 }
 
 export default Checkout
 
-
-
-// cart.forEach((item) => {
-//   console.log(item)
-//   const docRef = doc(db, 'productos', item.id)
-
-//   getDoc(docRef)
-//     .then((doc) => {
-//       let stock = doc.data().stock
-//       if(stock - item.quantity >= 0) {
-//         updateDoc(docRef, {
-//           stock: stock - item.quantity
-//         })
-//       } else {
-//         Swal.fire('No hay stock de ' + doc.data().name)
-//       }
-//     })
-// })
+    // validaciones
+    // if (values.nombre.length < 3) {
+    //   Swal.fire('El nombre es muy corto')
+    //   return 
+    // }
+    // if (values.direccion.length < 6) {
+    //   Swal.fire('La dirección es muy corta')
+    //   return 
+    // }
+    // if (!values.email.includes('@')) {
+    //   Swal.fire('El correo electrónico no es válido')
+    //   return 
+    // }

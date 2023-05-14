@@ -1,57 +1,67 @@
-import { createContext, useState } from "react"
+import { createContext, useEffect, useState } from "react"
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, signInWithPopup } from 'firebase/auth'
+import { auth, provider } from "../firebase/firebaseConfig"
 
 
 export const LoginContext = createContext()
 
-const MOCK_USERS = [
-  {
-    id: 1,
-    email: 'admin@coder.com',
-    password: 'coder'
-  },
-  {
-    id: 2,
-    email: 'tutor@coder.com',
-    password: 'coder'
-  },
-  {
-    id: 3,
-    email: 'a@coder.com',
-    password: '123'
-  }
-]
-
 export const LoginProvider = ( {children} ) => {
   const [user, setUser] = useState({
-    email: 'tutor@coder.com',
-    logged: true
+    email: null,
+    logged: false
   })
 
-  const login = (values) => {
-    const match = MOCK_USERS.find((user) => user.email === values.email && user.password === values.password)
+  const register = (values) => {
+    createUserWithEmailAndPassword(auth, values.email, values.password)
+      .catch((err) => console.log(err))
+  }
 
-    if (match) {
-      setUser({
-        email: match.email,
-        logged: true
+  const login = (values) => {
+    signInWithEmailAndPassword(auth, values.email, values.password)
+      .catch((err) => console.log(err))
+  }
+
+  const googleLogin = () => {
+    signInWithPopup(auth, provider)
+      .then((user) => {
+        console.log(user)
       })
-    }
   }
 
   const logout = () => {
-    setUser({
-      email: null,
-      logged: false
-    })
+    signOut(auth)
+      .then(() => {
+        setUser({
+          email: null,
+          logged: false
+        })
+      })
   }
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser({
+          email: user.email,
+          logged: true
+        })
+      } else {
+        logout()
+      }
+    })
+  }, [])
 
   return (
     <LoginContext.Provider value={{
       user,
       login,
-      logout
+      logout,
+      register, 
+      googleLogin
     }}>
       {children}
     </LoginContext.Provider>
   )
 }
+
+
