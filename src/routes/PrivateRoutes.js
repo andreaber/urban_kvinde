@@ -7,6 +7,7 @@ import Cart from "../components/Cart/Cart"
 import Nosotros from "../components/Nosotros/Nosotros"
 // import Error404 from "../Error404/Error404"
 import Footer from "../components/Footer/Footer"
+import Checkout from "../components/Checkout/Checkout"
 
 
 const PrivateRoutes = () => {
@@ -20,6 +21,7 @@ const PrivateRoutes = () => {
         <Route path='/productos/:categoryId' element={ <ItemListContainer /> } />
         <Route path='/detail/:itemId' element={ <ItemDetailContainer /> } />
         <Route path='/cart' element={ <Cart /> } /> 
+        <Route path='/checkout' element={ <Checkout /> } />
         <Route path='/nosotros' element={ <Nosotros /> } />
         <Route path="*" element={ <Navigate to={'/'} /> } />
         {/* <Route path='/contacto' element={ <Contacto /> } />  
