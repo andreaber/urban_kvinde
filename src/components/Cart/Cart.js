@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { TfiTrash } from 'react-icons/tfi'
 import { Link } from "react-router-dom"
+import './Cart.scss'
 
 
 const Cart = () => {

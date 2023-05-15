@@ -20,8 +20,7 @@ const Navbar = () => {
           <Link to='/productos/gorros' className="navbar_link">gorros</Link>
           <Link to='/productos/ellas' className="navbar_link">ellas</Link>
           <Link to='/productos/ellos' className="navbar_link">ellos</Link>
-          <Link to='/nosotros' className="navbar_link">nosotros</Link>
-          {/* <Link to='/contacto' className="navbar_link">contacto</Link> */}
+          <Link to='/contacto' className="navbar_link">contacto</Link>
           {/* <Link to='sign-in' className="navbar_link">iniciar sesión</Link> */}
         </nav>
 
@@ -29,7 +28,7 @@ const Navbar = () => {
       </div>
 
       <div className='user'>
-        <h6>¡Bienvenido {user.email}!</h6>
+        <h6>Bienvenido {user.email}</h6>
         <button onClick={logout} className='btn btn-danger'>Logout</button>
       </div>
 

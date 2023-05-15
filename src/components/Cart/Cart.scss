@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .btn {
+    max-width: 200px;
+  }
+}
+
+hr {
+  margin: 10px 0;
+}
+

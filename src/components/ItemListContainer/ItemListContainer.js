@@ -1,7 +1,7 @@
 import './ItemListContainer.scss'
 import ItemList from '../ItemList/ItemList'
 import Loader from '../Loader/Loader'
-import useProducts from './useProducts'
+import useProducts from '../../hooks/useProducts'
 
 
 
