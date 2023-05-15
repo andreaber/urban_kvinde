@@ -1,6 +1,4 @@
 
-
-
 const ItemCount = ( {stock, quantity, setQuantity, add} ) => {
 
   const handleSubstract = () => {
@@ -40,8 +38,6 @@ const ItemCount = ( {stock, quantity, setQuantity, add} ) => {
       ) : (
         <button onClick={add} className="btn btn-success">Agregar al carrito</button>
       )}
-
-      {/*<button disabled={stock === 0} onClick={add} className="btn btn-success">Agregar al carrito</button>*/}
     </div>
   )
 }

@@ -6,7 +6,6 @@ import { Fragment } from "react";
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
-
   return (  
     <Fragment>
       <footer>

@@ -3,7 +3,6 @@ import LoginScreen from "../components/LoginScreen/LoginScreen"
 import RegisterScreen from "../components/RegisterScreen/RegisterScreen"
 
 
-
 const PublicRoutes = () => {
 
   return (

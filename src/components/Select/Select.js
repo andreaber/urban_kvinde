@@ -1,7 +1,5 @@
 
 
-
-
 const Select = ( {set, options} ) => {
 
   const handleSelect = (e) => {

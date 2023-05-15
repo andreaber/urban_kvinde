@@ -4,7 +4,6 @@ import Loader from '../Loader/Loader'
 import useProducts from '../../hooks/useProducts'
 
 
-
 const ItemListContainer = () => {
 
   const {products, loading} = useProducts()
